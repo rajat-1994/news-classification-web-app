@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en-US">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>News Classifieds</title>
+            <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="{{ url_for('static', filename='script.js') }}"></script>
+        </head>
+
+        <body>
+            
+            <div class="header"></div>
+            
+               <div class="categories" style="margin-bottom: 40px;">
+                <a href="{{url_for('businessNews')}}">Business and Politics</a>
+                <a href="{{url_for('techNews')}}">Technology</a>
+                <a href="{{url_for('healthNews')}}" class="active">Health and Lifestyle</a>
+                <a href="{{url_for('entertainmentNews')}}">Entertainment</a>
+                <a href="{{url_for('environmentNews')}}">Environment</a>
+            </div>
+            
+            
+            
+            <div class="grid main-container" id="main-element">
+           {%for i in row%}
+                <div class="news-container grid-item">
+			<div class="news-title"><a target="_black" href="{{i.url}}">{{i.headline}}</a></div>
+			<div class="news-category"><span>Category : {{i.category}}</span><span></span></div>
+			<div class="news-source"><span>Source : {{i.source}} </span><span></span></div>
+			<div class="read-more"><a target="_black" href="{{i.url}}">READ MORE</a></div>
+		</div>
+            {% endfor %}
+            </div>
+        
+            
+        </body>
+        
+    </html>
