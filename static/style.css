@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+body{
+    margin: 0;
+    font-size: 100%;
+    font-family: roboto;
+    background: #eee;
+    font-weight: 400;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 70px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0px 2px 15px 0px #CCC;
+    z-index: 1000;
+    border-bottom: 1px solid #eaeaea;
+}
+
+
+.categories{
+    position: relative;
+}
+
+.categories a{
+    position: relative;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    color: #999;
+    outline: none;
+}
+.categories a:hover{
+    position: relative;
+    background: none;
+    border: none;
+    border-radius: 0;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
+    color: #21a1e1;
+    outline: none;
+}
+
+a.active{
+}
+
+a:focus{
+    outline: 0;
+}
+
+.active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #21a1e1;
+}
+
+.grid, .categories{
+    position: relative;
+    top: 120px;
+    width: 1505px;
+    margin: auto;
+}
+
+.grid{
+	column-count: 4;
+}
+
+.main-container{
+    //background: lightcyan;
+}
+
+.grid-item{
+    width: 285px;
+    margin-bottom: 20px;
+	
+	-webkit-column-break-inside: avoid;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+.news-container{
+    background: #fff;
+    padding: 15px;
+}
+
+
+.news-title{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.news-title a{
+    font-weight: 500;
+    font-size: 24px;
+    color: #555;
+}
+.news-title a:hover{
+    font-weight: 500;
+    font-size: 24px;
+    color: #0067a9;
+}
+
+
+.news-category, .news-source{
+    margin: 10px 0px;
+}
+
+.news-category span, .news-source span{
+    color: #777;
+}
+
+.news-category span:first-child, .news-source span:first-child{
+    font-weight: 300;
+    color: #555;
+}
+
+.read-more{
+    margin: 30px 0px 15px 0px;
+}
+
+.read-more a{
+    text-decoration: none;
+    color: #fff;
+    background: #21a1e1;
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 350;
+    transition: all 0.2s ease;
+}
+
+.read-more a:hover{
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+@media only screen and (max-width: 1525px){
+    .grid, .categories{
+        width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1220px){
+    .grid, .categories{
+        width: 895px;
+    }
+}
+@media only screen and (max-width: 915px){
+    .grid, .categories{
+        width: 590px;
+    }
+}
+@media only screen and (max-width: 610px){
+    .grid, .categories{
+        width: 285px;
+    }
+}
